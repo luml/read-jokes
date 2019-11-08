@@ -1,8 +1,8 @@
 .main {
   display: grid;
-  grid-template-columns: 15% 20% auto 20% 15%;
+  grid-template-columns: repeat(4, 24%);
   /* grid-template-rows: 30% auto 30%; */
-  grid-column-gap: 10px;
+  grid-column-gap: 15px;
   grid-row-gap: 15px;
 }
 
