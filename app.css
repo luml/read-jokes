@@ -1,11 +1,41 @@
-.main {
-  display: grid;
-  grid-template-columns: repeat(4, 24%);
-  /* grid-template-rows: 30% auto 30%; */
-  grid-column-gap: 15px;
-  grid-row-gap: 15px;
+/* For 27inc iMac */
+@media screen and (max-width:2600px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(10, 9.4%);
+    grid-column-gap: 15px;
+    grid-row-gap: 20px;
+  }
+}
+@media screen and (max-width:1300px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
+    grid-column-gap: 15px;
+    grid-row-gap: 20px;
+  }
+}
+@media screen and (max-width:665px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    grid-column-gap: 15px;
+    grid-row-gap: 20px;
+  }
+}
+/* For iphone XS */
+@media screen and (max-width:250px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-row-gap: 20px;
+  }
 }
 
+
+/* Make it each article height properly */
 .main article {
   background: #d4f1bc;
+  width:100%;
+  height: auto;
 }
