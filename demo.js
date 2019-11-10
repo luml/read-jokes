@@ -1,18 +1,22 @@
 let i = true;
 while (i) {
   let article = document.createElement("article");
+  let jokeP = document.createElement("p");
+  article.appendChild(jokeP);
   article.style.color = "deeppink";
-  article.innerText = document.querySelector(".main").appendChild(article);
+  document.querySelector(".main").appendChild(article);
   // make sure height > screenHeight, not very true
-  if (document.querySelector(".main").offsetHeight > window.outerHeight / 2) {
+  if (document.querySelector(".main").offsetHeight > window.outerHeight / 4) {
     i = false;
   }
 }
 
 for (let item of document.querySelectorAll("article")) {
   // make a joke
+  item.innerText = "Be ready for a joke...";
+  item.style.color = "green";
   getData(item);
-  item.style.padding = "5px 0 0 5px";
+  // item.style.padding = "5px 0 0 5px";
 }
 
 async function getData(article) {
@@ -21,6 +25,7 @@ async function getData(article) {
       `https://api.chucknorris.io/jokes/random`
     ).then(res => res.json());
     article.innerText = chuckJokes.value;
+    article.style.color = "deeppink";
   } catch (error) {
     console.warn(`We have an error here: ${error}`);
   } finally {

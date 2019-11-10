@@ -37,5 +37,10 @@
 .main article {
   background: #d4f1bc;
   width:100%;
+}
+
+p {
+  margin: 0;
+  padding: 0 0 5px 5px;
   height: auto;
 }
