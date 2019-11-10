@@ -1,7 +1,7 @@
 let i = true;
 while (i) {
   let article = document.createElement("article");
-  article.style.color = "teal";
+  article.style.color = "deeppink";
   article.innerText = document.querySelector(".main").appendChild(article);
   // make sure height > screenHeight, not very true
   if (document.querySelector(".main").offsetHeight > window.outerHeight / 2) {
