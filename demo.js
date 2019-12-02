@@ -6,8 +6,22 @@ while (i) {
   article.style.color = "deeppink";
   document.querySelector(".main").appendChild(article);
   // make sure height > screenHeight, not very true
-  // TODO make sure there's no empty block left
   if (document.querySelector(".main").offsetHeight > window.outerHeight / 4) {
+    const articleNum = document.querySelectorAll(".main article").length;
+    // if (window.outerWidth > 1300 || window.outerWidth <= 665) {
+    //   if (articleNum > 1) {
+    //     document.querySelectorAll(".main article")[articleNum - 1].remove();
+    //   }
+    // } else if (window.outerWidth > 665 && window.outerWidth <= 1300) {
+    //   if (articleNum > 1) {
+    //     document.querySelectorAll(".main article")[articleNum - 1].remove();
+    //   }
+    // } else {
+    //   document.querySelectorAll(".main article")[articleNum - 1].remove();
+    // }
+    if (articleNum > 1) {
+      document.querySelectorAll(".main article")[articleNum - 1].remove();
+    }
     i = false;
   }
 }
