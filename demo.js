@@ -1,3 +1,4 @@
+// #1 Part one: Jokes
 let i = true;
 while (i) {
   let article = document.createElement("article");
@@ -46,4 +47,9 @@ async function getData(article) {
   } finally {
     console.log("Finally will fire no matter what!");
   }
+}
+
+// #2 Part two: songs
+document.querySelector(".writeSong button").onclick = function(){
+  window.open('./song.html');
 }

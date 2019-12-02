@@ -1,26 +1,30 @@
+body {
+  margin: 2px;
+}
+
 /* For 27inc iMac */
 @media screen and (max-width: 2600px) {
   .main {
     display: grid;
-    grid-template-columns: repeat(10, 9.4%);
-    grid-column-gap: 15px;
-    grid-row-gap: 20px;
+    grid-template-columns: repeat(10, 9.9%);
+    grid-column-gap: 1px;
+    grid-row-gap: 2px;
   }
 }
 @media screen and (max-width: 1300px) {
   .main {
     display: grid;
-    grid-template-columns: repeat(4, 23%);
-    grid-column-gap: 15px;
-    grid-row-gap: 20px;
+    grid-template-columns: repeat(4, 24.9%);
+    grid-column-gap: 1px;
+    grid-row-gap: 2px;
   }
 }
 @media screen and (max-width: 665px) {
   .main {
     display: grid;
-    grid-template-columns: repeat(2, 48%);
-    grid-column-gap: 15px;
-    grid-row-gap: 20px;
+    grid-template-columns: repeat(2, 49.9%);
+    grid-column-gap: 1px;
+    grid-row-gap: 2px;
   }
 }
 /* For iphone XS */
@@ -29,7 +33,7 @@
   .main {
     display: grid;
     grid-template-columns: repeat(1, 100%);
-    grid-row-gap: 20px;
+    grid-row-gap: 2px;
   }
 }
 
@@ -38,7 +42,7 @@
 /* Make it each article height properly */
 .main article {
   background: #d1d6cd;
-  opacity: 0.7;
+  opacity: 0.6;
   width: 100%;
 }
 p {
@@ -49,4 +53,10 @@ p {
 .main {
   background: #e9eee4 url(https://source.unsplash.com/random);
   background-size: cover;
+}
+.writeSong {
+  display: flex;
+}
+.writeSong > button {
+  background-color: deeppink;
 }
