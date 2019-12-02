@@ -6,6 +6,7 @@ while (i) {
   article.style.color = "deeppink";
   document.querySelector(".main").appendChild(article);
   // make sure height > screenHeight, not very true
+  // TODO make sure there's no empty block left
   if (document.querySelector(".main").offsetHeight > window.outerHeight / 4) {
     i = false;
   }

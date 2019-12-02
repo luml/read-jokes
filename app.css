@@ -1,5 +1,5 @@
 /* For 27inc iMac */
-@media screen and (max-width:2600px) {
+@media screen and (max-width: 2600px) {
   .main {
     display: grid;
     grid-template-columns: repeat(10, 9.4%);
@@ -7,7 +7,7 @@
     grid-row-gap: 20px;
   }
 }
-@media screen and (max-width:1300px) {
+@media screen and (max-width: 1300px) {
   .main {
     display: grid;
     grid-template-columns: repeat(4, 23%);
@@ -15,7 +15,7 @@
     grid-row-gap: 20px;
   }
 }
-@media screen and (max-width:665px) {
+@media screen and (max-width: 665px) {
   .main {
     display: grid;
     grid-template-columns: repeat(2, 48%);
@@ -24,7 +24,8 @@
   }
 }
 /* For iphone XS */
-@media screen and (max-width:250px) {
+/* TODO not work on XS */
+@media screen and (max-width: 250px) {
   .main {
     display: grid;
     grid-template-columns: repeat(1, 100%);
@@ -32,12 +33,11 @@
   }
 }
 
-
 /* Make it each article height properly */
 .main article {
   background: #d1d6cd;
   opacity: 0.7;
-  width:100%;
+  width: 100%;
 }
 
 p {
