@@ -1,25 +1,18 @@
+// *** global content area  ***
+let globalColor = "peru";
+let cacheColor = "teal";
+
 // #1 Part one: Jokes
 let i = true;
 while (i) {
   let article = document.createElement("article");
   let jokeP = document.createElement("p");
   article.appendChild(jokeP);
-  article.style.color = "deeppink";
+  article.style.color = globalColor;
   document.querySelector(".main").appendChild(article);
   // make sure height > screenHeight, not very true
   if (document.querySelector(".main").offsetHeight > window.outerHeight / 4) {
     const articleNum = document.querySelectorAll(".main article").length;
-    // if (window.outerWidth > 1300 || window.outerWidth <= 665) {
-    //   if (articleNum > 1) {
-    //     document.querySelectorAll(".main article")[articleNum - 1].remove();
-    //   }
-    // } else if (window.outerWidth > 665 && window.outerWidth <= 1300) {
-    //   if (articleNum > 1) {
-    //     document.querySelectorAll(".main article")[articleNum - 1].remove();
-    //   }
-    // } else {
-    //   document.querySelectorAll(".main article")[articleNum - 1].remove();
-    // }
     if (articleNum > 1) {
       document.querySelectorAll(".main article")[articleNum - 1].remove();
     }
@@ -30,9 +23,8 @@ while (i) {
 for (let item of document.querySelectorAll("article")) {
   // make a joke
   item.innerText = "Be ready for a joke...";
-  item.style.color = "green";
+  item.style.color = cacheColor;
   getData(item);
-  // item.style.padding = "5px 0 0 5px";
 }
 
 async function getData(article) {
@@ -41,7 +33,7 @@ async function getData(article) {
       `https://api.chucknorris.io/jokes/random`
     ).then(res => res.json());
     article.innerText = chuckJokes.value;
-    article.style.color = "deeppink";
+    article.style.color = globalColor;
   } catch (error) {
     console.warn(`We have an error here: ${error}`);
   } finally {
@@ -50,6 +42,6 @@ async function getData(article) {
 }
 
 // #2 Part two: songs
-document.querySelector(".writeSong button").onclick = function(){
-  window.open('./song.html');
-}
+document.querySelector(".writeSong button").onclick = function() {
+  window.open("./song.html");
+};
