@@ -1,0 +1,28 @@
+.pic {
+    display: flex;
+    justify-content: space-around;
+    /* background: url('./headshot.jpg');
+    background-position: center center;
+    background-repeat: no-repeat; */
+}
+.pic img {
+    width: 50%;
+    opacity: 0.7;
+}
+.lines {
+    display: flex;
+    justify-content: center;
+}
+.lines textarea {
+    margin: 1em;
+    width: 80%;
+    height: 180px;
+    font-size: xx-large;
+    font-style: italic;
+    font-weight: bolder;
+    border: rgb(89 95 94) solid 0.1em;
+    border-radius: 0.5em;
+    outline: none;
+    color: teal;
+    /* TODO number of words */
+}

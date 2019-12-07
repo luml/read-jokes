@@ -1,6 +1,6 @@
 // *** global content area  ***
 let globalColor = "peru";
-let cacheColor = "teal";
+let cacheColor = "rgb(233, 225, 178)";
 
 // #1 Part one: Jokes
 let i = true;

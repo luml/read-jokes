@@ -69,10 +69,12 @@ p {
 
 /* Part3 link to song page */
 .writeSong {
+  background: antiquewhite;
   display: flex;
   justify-content: space-between;
 }
 .writeSong > button {
-  background-color: peru;
+  background-color: rgb(223, 179, 122);
   outline: none;
+  border-radius: 1em;
 }
