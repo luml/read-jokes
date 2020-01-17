@@ -22,7 +22,7 @@
   font-weight: bolder;
   border: rgb(89 95 94) solid 0.1em;
   border-radius: 0 6.5em;
-  outline: none;
+  /* outline: none; */
   color: teal;
   /* TODO number of words */
 }

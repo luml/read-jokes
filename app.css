@@ -75,7 +75,7 @@ p {
 }
 .writeSong > button {
   background-color: rgb(223, 179, 122);
-  outline: none;
+  /* outline: none; */
   border-radius: 1em;
   border-style: inset;
   border-width: 4px 1.5em;
