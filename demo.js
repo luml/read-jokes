@@ -33,6 +33,15 @@ async function getData(article) {
       `https://api.chucknorris.io/jokes/random`
     ).then(res => res.json());
     article.innerText = chuckJokes.value;
+    const words = chuckJokes.value.length;
+    if (words >= 600) {
+      article.style.gridColumn = "span 3";
+      article.style.backgroundColor = "rgb(178, 202, 163)";
+    }
+    if (words >= 300 && words < 600) {
+      article.style.gridColumn = "span 2";
+      article.style.backgroundColor = "rgb(78, 202, 163)";
+    }
     article.style.color = globalColor;
   } catch (error) {
     console.warn(`We have an error here: ${error}`);

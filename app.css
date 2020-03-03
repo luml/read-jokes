@@ -15,47 +15,23 @@ body {
 }
 
 /* Part2 Articles */
-/* For 27inc iMac */
-@media screen and (max-width: 2600px) {
-  .main {
-    display: grid;
-    grid-template-columns: repeat(10, 9.9%);
-    grid-column-gap: 1px;
-    grid-row-gap: 2px;
-  }
-}
-@media screen and (max-width: 1300px) {
-  .main {
-    display: grid;
-    grid-template-columns: repeat(4, 24.9%);
-    grid-column-gap: 1px;
-    grid-row-gap: 2px;
-  }
-}
-@media screen and (max-width: 665px) {
-  .main {
-    display: grid;
-    grid-template-columns: repeat(2, 49.9%);
-    grid-column-gap: 1px;
-    grid-row-gap: 2px;
-  }
-}
-/* For iphone XS */
-/* TODO not work on XS */
-@media screen and (max-width: 250px) {
-  .main {
-    display: grid;
-    grid-template-columns: repeat(1, 100%);
-    grid-row-gap: 2px;
-  }
+/* maybe we don't need media query anymore, we can imply auto-fit from css grid */
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 0.8em;
+  grid-auto-flow: dense;
 }
 
-/* TODO maybe i can simplify the media */
-/* Make it each article height properly */
+/* maybe i can simplify the media, we can imply grid-column: span n */
+/* Make it each article height properly, not exactly each article */
 .main article {
   background: #edf3e9;
   opacity: 0.7;
   width: 100%;
+  text-align: center;
+  text-indent: 1rem;
+  border-radius: 1rem;
 }
 p {
   margin: 0;
