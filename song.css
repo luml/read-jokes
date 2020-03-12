@@ -7,7 +7,7 @@
 }
 .pic img {
   width: 50%;
-  opacity: 0.7;
+  filter: opacity(0.7) brightness(72%) saturate(0.4) contrast(100);
 }
 .lines {
   display: flex;
@@ -22,7 +22,8 @@
   font-weight: bolder;
   border: rgb(89 95 94) solid 0.1em;
   border-radius: 0 6.5em;
-  /* outline: none; */
   color: teal;
+  text-align: center;
+  text-transform: uppercase;
   /* TODO number of words */
 }
