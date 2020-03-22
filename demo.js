@@ -56,7 +56,8 @@ async function getData(article) {
     performance.measure("Fetching all jokes", "start", "end");
     const measurements = performance.getEntriesByType("measure");
     console.log(measurements);
-
+    // Clear out all marks
+    performance.clearMarks();
   } catch (error) {
     console.warn(`We have an error here: ${error}`);
   } finally {
