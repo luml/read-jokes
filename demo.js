@@ -50,7 +50,7 @@ async function getData(article) {
   }
 }
 
-// #2 Part two: songs
-document.querySelector(".writeSong button").onclick = function() {
-  window.open("./song.html");
-};
+// #2 Part two: songs; not open it in a new tab window
+// document.querySelector(".writeSong button").onclick = function() {
+//   window.open("./song.html");
+// };
