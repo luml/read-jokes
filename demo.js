@@ -28,6 +28,10 @@ for (let item of document.querySelectorAll("article")) {
 }
 
 async function getData(article) {
+  // Imply performance API
+  const start = new Date().getTime();
+  performance.mark("start");
+
   try {
     let chuckJokes = await fetch(
       `https://api.chucknorris.io/jokes/random`
@@ -43,6 +47,16 @@ async function getData(article) {
       article.style.backgroundColor = "rgb(78, 202, 163)";
     }
     article.style.color = globalColor;
+
+    // Imply performance API
+    const end = new Date().getTime();
+    const time = end - start;
+    // console.log(time)
+    performance.mark("end");
+    performance.measure("Fetching all jokes", "start", "end");
+    const measurements = performance.getEntriesByType("measure");
+    console.log(measurements);
+
   } catch (error) {
     console.warn(`We have an error here: ${error}`);
   } finally {
