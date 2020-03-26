@@ -1,4 +1,8 @@
 body {
+  --bg: rgb(228, 194, 161);
+  --border-bg: rgb(233, 225, 178);
+  --main-bg: #e9eee4;
+  --article-bg: #d0dfc2;
   margin: 2px;
 }
 /* Part1 Headline */
@@ -9,8 +13,8 @@ body {
 .headlines > div {
   flex: 1;
   padding: 1rem;
-  background-color: rgb(228, 194, 161);
-  border: 5px solid rgb(233, 225, 178);
+  background-color: var(--bg);
+  border: 5px solid var(--border-bg);
   border-radius: 15px;
 }
 
@@ -26,7 +30,7 @@ body {
 /* maybe i can simplify the media, we can imply grid-column: span n */
 /* Make it each article height properly, not exactly each article */
 .main article {
-  background: #edf3e9;
+  background: var(--article-bg);
   opacity: 0.7;
   width: 100%;
   text-align: center;
@@ -39,7 +43,7 @@ p {
   height: auto;
 }
 .main {
-  background: #e9eee4 url(https://source.unsplash.com/random);
+  background: var(--main-bg) url(https://source.unsplash.com/random);
   background-size: cover;
 }
 
@@ -50,7 +54,7 @@ p {
   justify-content: space-between;
 }
 .writeSong > button {
-  background-color: rgb(223, 179, 122);
+  background-color: var(--bg);
   /* outline: none; */
   border-radius: 1em;
   border-style: inset;
