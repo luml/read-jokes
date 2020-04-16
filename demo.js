@@ -38,13 +38,23 @@ async function getData(article) {
     ).then(res => res.json());
     article.innerText = chuckJokes.value;
     const words = chuckJokes.value.length;
-    if (words >= 600) {
+    if (words >= 300) {
       article.style.gridColumn = "span 3";
       article.style.backgroundColor = "rgb(178, 202, 163)";
+      // shape-outside and clip-path make a sharp shape starts right
+      const newDiv = document.createElement('div');
+      newDiv.style.shapeOutside = 'polygon(100% 0,100% 100%,0 100%)'
+      newDiv.style.clipPath = 'polygon(100% 0, 100% 100%, 0 100%)'
+      article.appendChild(newDivLayout(newDiv));
     }
-    if (words >= 300 && words < 600) {
+    if (words >= 180 && words < 300) {
       article.style.gridColumn = "span 2";
       article.style.backgroundColor = "rgb(78, 202, 163)";
+      // shape-outside and clip-path make a sharp shape starts left
+      const newDiv = document.createElement('div');
+      newDiv.style.shapeOutside = 'polygon(0 0,100% 100%,0 100%)'
+      newDiv.style.clipPath = 'polygon(0 0, 100% 100%, 0 100%)'
+      article.appendChild(newDivLayout(newDiv));
     }
     article.style.color = globalColor;
 
@@ -65,6 +75,12 @@ async function getData(article) {
   }
 }
 
+function newDivLayout(newDiv) {
+  newDiv.style.height = '8vh'
+  newDiv.style.backgroundColor = 'red'
+  newDiv.style.borderRadius = '0 0 1em 1em'
+  return newDiv
+}
 // #2 Part two: songs; not open it in a new tab window
 // document.querySelector(".writeSong button").onclick = function() {
 //   window.open("./song.html");
