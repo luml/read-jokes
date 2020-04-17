@@ -36,7 +36,11 @@ async function getData(article) {
     let chuckJokes = await fetch(
       `https://api.chucknorris.io/jokes/random`
     ).then(res => res.json());
-    article.innerText = chuckJokes.value;
+    const pDiv = document.createElement('div')
+    pDiv.innerText = chuckJokes.value
+    pDiv.style.height = '70%'
+    article.innerText = ''
+    article.appendChild(pDiv)
     const words = chuckJokes.value.length;
     if (words >= 300) {
       article.style.gridColumn = "span 3";
@@ -76,9 +80,10 @@ async function getData(article) {
 }
 
 function newDivLayout(newDiv) {
-  newDiv.style.height = '8vh'
+  newDiv.style.height = '30%'
   newDiv.style.backgroundColor = 'red'
   newDiv.style.borderRadius = '0 0 1em 1em'
+  newDiv.style.margin = 0
   return newDiv
 }
 // #2 Part two: songs; not open it in a new tab window
