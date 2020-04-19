@@ -50,6 +50,7 @@ async function getData(article) {
       newDiv.style.shapeOutside = 'polygon(100% 0,100% 100%,0 100%)'
       newDiv.style.clipPath = 'polygon(100% 0, 100% 100%, 0 100%)'
       article.appendChild(newDivLayout(newDiv));
+      article.firstElementChild.style.color = 'blue'
     }
     if (words >= 180 && words < 300) {
       article.style.gridColumn = "span 2";
@@ -59,6 +60,7 @@ async function getData(article) {
       newDiv.style.shapeOutside = 'polygon(0 0,100% 100%,0 100%)'
       newDiv.style.clipPath = 'polygon(0 0, 100% 100%, 0 100%)'
       article.appendChild(newDivLayout(newDiv));
+      article.childNodes[0].style.color = 'red'
     }
     article.style.color = globalColor;
 
