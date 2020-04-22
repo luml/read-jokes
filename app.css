@@ -14,7 +14,7 @@ body {
 .headlines > div {
   flex: 1;
   padding: 1rem;
-  background-color: var(--bg);
+  background: linear-gradient(var(--bg), antiquewhite);
   border: 0.3rem solid var(--border-bg);
   border-radius: 1rem;
 }
@@ -50,7 +50,7 @@ p {
 
 /* Part3 link to song page */
 .writeSong {
-  background: antiquewhite;
+  background: linear-gradient(var(--bg), antiquewhite);
   display: flex;
   justify-content: space-between;
 }
