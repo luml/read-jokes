@@ -9,13 +9,14 @@ body {
 .headlines {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .headlines > div {
   flex: 1;
   padding: 1rem;
   background-color: var(--bg);
-  border: 5px solid var(--border-bg);
-  border-radius: 15px;
+  border: 0.3rem solid var(--border-bg);
+  border-radius: 1rem;
 }
 
 /* Part2 Articles */
