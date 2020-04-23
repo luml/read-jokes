@@ -36,31 +36,34 @@ async function getData(article) {
     let chuckJokes = await fetch(
       `https://api.chucknorris.io/jokes/random`
     ).then(res => res.json());
-    const pDiv = document.createElement('div')
-    pDiv.innerText = chuckJokes.value
-    pDiv.style.height = '70%'
-    article.innerText = ''
-    article.appendChild(pDiv)
+    const pDiv = document.createElement("div");
+    pDiv.textContent = chuckJokes.value;
+    // pDiv.innerText = chuckJokes.value
+    pDiv.style.height = "70%";
+    // There're important differences between textContent and innerText
+    article.textContent = null;
+    // article.innerText = ''
+    article.appendChild(pDiv);
     const words = chuckJokes.value.length;
     if (words >= 300) {
       article.style.gridColumn = "span 3";
       article.style.backgroundColor = "rgb(178, 202, 163)";
       // shape-outside and clip-path make a sharp shape starts right
-      const newDiv = document.createElement('div');
-      newDiv.style.shapeOutside = 'polygon(100% 0,100% 100%,0 100%)'
-      newDiv.style.clipPath = 'polygon(100% 0, 100% 100%, 0 100%)'
+      const newDiv = document.createElement("div");
+      newDiv.style.shapeOutside = "polygon(100% 0,100% 100%,0 100%)";
+      newDiv.style.clipPath = "polygon(100% 0, 100% 100%, 0 100%)";
       article.appendChild(newDivLayout(newDiv));
-      article.firstElementChild.style.color = 'blue'
+      article.firstElementChild.style.color = "blue";
     }
     if (words >= 180 && words < 300) {
       article.style.gridColumn = "span 2";
       article.style.backgroundColor = "rgb(78, 202, 163)";
       // shape-outside and clip-path make a sharp shape starts left
-      const newDiv = document.createElement('div');
-      newDiv.style.shapeOutside = 'polygon(0 0,100% 100%,0 100%)'
-      newDiv.style.clipPath = 'polygon(0 0, 100% 100%, 0 100%)'
+      const newDiv = document.createElement("div");
+      newDiv.style.shapeOutside = "polygon(0 0,100% 100%,0 100%)";
+      newDiv.style.clipPath = "polygon(0 0, 100% 100%, 0 100%)";
       article.appendChild(newDivLayout(newDiv));
-      article.childNodes[0].style.color = 'red'
+      article.childNodes[0].style.color = "red";
     }
     article.style.color = globalColor;
 
@@ -82,11 +85,11 @@ async function getData(article) {
 }
 
 function newDivLayout(newDiv) {
-  newDiv.style.height = '30%'
-  newDiv.style.backgroundColor = 'red'
-  newDiv.style.borderRadius = '0 0 1em 1em'
-  newDiv.style.margin = 0
-  return newDiv
+  newDiv.style.height = "30%";
+  newDiv.style.backgroundColor = "red";
+  newDiv.style.borderRadius = "0 0 1em 1em";
+  newDiv.style.margin = 0;
+  return newDiv;
 }
 // #2 Part two: songs; not open it in a new tab window
 // document.querySelector(".writeSong button").onclick = function() {
