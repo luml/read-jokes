@@ -1,6 +1,8 @@
 // *** global content area  ***
 let globalColor = "peru";
 let cacheColor = "rgb(86, 75, 9)";
+let markColor = "red";
+let moreWordsColor = "blue";
 
 // #1 Part one: Jokes
 let i = true;
@@ -22,7 +24,8 @@ while (i) {
 
 for (let item of document.querySelectorAll("article")) {
   // make a joke
-  item.innerText = "Be ready for a joke...";
+  item.textContent = "Be ready for a joke...";
+  // item.innerText = "Be ready for a joke...";
   item.style.color = cacheColor;
   getData(item);
 }
@@ -53,7 +56,7 @@ async function getData(article) {
       newDiv.style.shapeOutside = "polygon(100% 0,100% 100%,0 100%)";
       newDiv.style.clipPath = "polygon(100% 0, 100% 100%, 0 100%)";
       article.appendChild(newDivLayout(newDiv));
-      article.firstElementChild.style.color = "blue";
+      article.firstElementChild.style.color = moreWordsColor;
     }
     if (words >= 180 && words < 300) {
       article.style.gridColumn = "span 2";
@@ -63,7 +66,7 @@ async function getData(article) {
       newDiv.style.shapeOutside = "polygon(0 0,100% 100%,0 100%)";
       newDiv.style.clipPath = "polygon(0 0, 100% 100%, 0 100%)";
       article.appendChild(newDivLayout(newDiv));
-      article.childNodes[0].style.color = "red";
+      article.childNodes[0].style.color = markColor;
     }
     article.style.color = globalColor;
 
@@ -86,7 +89,7 @@ async function getData(article) {
 
 function newDivLayout(newDiv) {
   newDiv.style.height = "30%";
-  newDiv.style.backgroundColor = "red";
+  newDiv.style.backgroundColor = markColor;
   newDiv.style.borderRadius = "0 0 1em 1em";
   newDiv.style.margin = 0;
   return newDiv;
