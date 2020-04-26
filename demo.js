@@ -91,7 +91,7 @@ async function getData(article) {
     const end = new Date().getTime();
     const time = end - start;
     // add a timer to each joke, millisecond
-    article.appendChild(document.createTextNode(time / 1000 + " sec"));
+    article.appendChild(document.createTextNode(`${time / 1000} sec(s)`));
 
     performance.mark("end");
     performance.measure("Fetching all jokes", "start", "end");
@@ -102,7 +102,7 @@ async function getData(article) {
   } catch (error) {
     console.warn(`We have an error here: ${error}`);
   } finally {
-    console.log("Finally will fire no matter what!");
+    console.log("Final will fire no matter what!");
   }
 }
 
