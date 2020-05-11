@@ -7,23 +7,48 @@
 }
 .pic img {
   width: 50%;
-  filter: opacity(0.7) brightness(72%) saturate(0.8);
+  /* filter: opacity(0.7) brightness(72%) saturate(0.4) contrast(100); */
 }
 .lines {
   display: flex;
   justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 20px;
 }
 .lines textarea {
   margin: 1em;
-  width: 80%;
-  height: 180px;
+  width: 100%;
+  height: 50px;
   font-size: xx-large;
   font-style: italic;
   font-weight: bolder;
   border: rgb(89 95 94) solid 0.1em;
-  border-radius: 0 6.5em;
-  color: teal;
-  text-align: center;
-  text-transform: uppercase;
-  /* TODO number of words */
+  border-radius: 0.2em;
+  color: black;
+  text-align: left;
+  /*   text-transform: uppercase; */
+  /* horizontal scrollable box */
+  white-space: nowrap;
+  /* background: linear-gradient(#e66465, #d7d8e2); */
+  background: linear-gradient(
+      217deg,
+      rgba(255, 0, 0, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  /* background: linear-gradient(to right, black, black),
+    linear-gradient(to right, black, black),
+    linear-gradient(to right, rgba(black, 1), rgba(black, 0)),
+    linear-gradient(to left, rgba(black, 1), rgba(black, 0));
+     */
+  /* background-position: left center, right center, left center, right center; */
+  /*   background-repeat: no-repeat; */
+  /*   background-color: transparent; */
+  /*   background-size: 20px 100%, 20px 100%, 20px 100%, 20px 100%; */
+  /*   background-attachment: local, local, scroll, scroll; */
 }
